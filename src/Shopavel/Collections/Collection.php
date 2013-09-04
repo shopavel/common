@@ -19,7 +19,7 @@ class Collection implements CollectionInterface, ArrayAccess, Countable {
 
     public function exists($key)
     {
-        return isset($this->items[$key]);
+        return null !== array_get($this->items, $key);
     }
 
     public function get($key)
@@ -28,7 +28,7 @@ class Collection implements CollectionInterface, ArrayAccess, Countable {
         {
             throw new CollectionException("Key '" . $key . "' does not exist on collection.");
         }
-        return $this->items[$key];
+        return array_get($this->items, $key);
     }
 
     public function first()
@@ -47,7 +47,7 @@ class Collection implements CollectionInterface, ArrayAccess, Countable {
         {
             throw new CollectionException("Key '" . $key . "' already exists on collection.");
         }
-        $this->items[$key] = $value;
+        array_set($this->items, $key, $value);
     }
 
     public function remove($key)
@@ -56,7 +56,7 @@ class Collection implements CollectionInterface, ArrayAccess, Countable {
         {
             throw new CollectionException("Key '" . $key . "' does not exist on collection.");
         }
-        unset($this->items[$key]);
+       array_forget($this->items, $key);
     }
 
     public function offsetExists($offset)

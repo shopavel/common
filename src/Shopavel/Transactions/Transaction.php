@@ -1,6 +1,7 @@
 <?php namespace Shopavel\Transactions;
 
 use Illuminate\Container\Container;
+use Shopavel\Validators\ValidatorInterface;
 
 class Transaction implements TransactionInterface {
 
@@ -10,9 +11,9 @@ class Transaction implements TransactionInterface {
 
     public function __construct(array $validators = null, Container $app, Capsule $db)
     {
+        $this->validators = $validators;
         $this->app = $app;
         $this->db = $db;
-        $this->validators = $validators;
     }
 
     public function validate($object)
@@ -21,7 +22,10 @@ class Transaction implements TransactionInterface {
 
         foreach ($this->validators as $validator)
         {
-            $validator->validate($object);
+            if ($validator instanceof ValidatorInterface)
+            {
+                $validator->validate($object);
+            }
         }
     }
 
