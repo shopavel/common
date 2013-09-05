@@ -27,7 +27,7 @@ All packaged shopavel controllers extend `Shopavel\Controllers\Controller`, whic
 NestedSets
 ----------
 
-Nested sets provide a fast way to create hierarchical relationships, e.g. categories. You can read me on [wikipedia](http://en.wikipedia.org/wiki/Nested_set_model) or in the [cartalyst docs](http://docs.cartalyst.com/nested-sets-2).
+Nested sets provide a fast way to create hierarchical relationships, e.g. categories. You can read more on [wikipedia](http://en.wikipedia.org/wiki/Nested_set_model) or in the [cartalyst docs](http://docs.cartalyst.com/nested-sets-2).
 
 
 
@@ -42,3 +42,12 @@ Validators
 ----------
 
 Validators can be used to provide checks against objects prior to committing a transaction. If an issue is encountered an exception should be thrown.
+
+
+
+Locations
+---------
+
+Locations are nested set nodes, this allows you to define any depth of location as needed from continents to states, districts or any arbitrary non-geographical location.
+
+Addresses allow you to define up to 4 additional lines along with a location.
