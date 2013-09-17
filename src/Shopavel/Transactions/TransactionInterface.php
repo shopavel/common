@@ -3,7 +3,7 @@
 /**
  * Interface for transactions.
  *
- * @author  Laurence Roberts <lsjroberts@gmail.com>
+ * @author  Laurence Roberts <lsjroberts@outlook.com>
  */
 interface TransactionInterface {
 

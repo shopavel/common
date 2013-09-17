@@ -3,7 +3,7 @@
 /**
  * Immutable collection that does not allow items to be added or removed.
  *
- * @author  Laurence Roberts <lsjroberts@gmail.com>
+ * @author  Laurence Roberts <lsjroberts@outlook.com>
  */
 class ImmutableCollection extends Collection {
 

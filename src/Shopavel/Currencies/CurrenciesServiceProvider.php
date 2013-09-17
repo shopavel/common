@@ -5,7 +5,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Currencies service provider.
  *
- * @author  Laurence Roberts <lsjroberts@gmail.com>
+ * @author  Laurence Roberts <lsjroberts@outlook.com>
  */
 class CurrenciesServiceProvider extends ServiceProvider {
 

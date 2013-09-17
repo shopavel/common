@@ -3,7 +3,7 @@
 /**
  * Interface for exceptions.
  *
- * @author  Laurence Roberts <lsjroberts@gmail.com>
+ * @author  Laurence Roberts <lsjroberts@outlook.com>
  */
 interface ExceptionInterface {
 

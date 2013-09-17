@@ -1,13 +1,9 @@
-<?php namespace Shopavel\Locations;
+<?php namespace Shopavel;
 
+use Illuminate\Container\Container;
 use Illuminate\Support\ServiceProvider;
 
-/**
- * Locations service provider.
- *
- * @author  Laurence Roberts <lsjroberts@outlook.com>
- */
-class LocationsServiceProvider extends ServiceProvider {
+class ShopavelServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -23,12 +19,7 @@ class LocationsServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        $this->package('shopavel/locations');
-
-        $this->app['location.address'] = $this->app->share(function($app)
-        {
-            return new Address;
-        });
+        $this->package('shopavel/core');
     }
 
     /**
@@ -38,7 +29,7 @@ class LocationsServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        //
+
     }
 
     /**
@@ -48,7 +39,7 @@ class LocationsServiceProvider extends ServiceProvider {
      */
     public function provides()
     {
-        return array('location.address');
+        return array();
     }
 
 }

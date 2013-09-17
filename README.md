@@ -48,6 +48,12 @@ Validators can be used to provide checks against objects prior to committing a t
 Locations
 ---------
 
-Locations are nested set nodes, this allows you to define any depth of location as needed from continents to states, districts or any arbitrary non-geographical location.
+Locations are nested set nodes, this allows you to define any depth of location as needed from continents to states, districts or even any arbitrary non-geographical location.
 
 Addresses allow you to define up to 4 additional lines along with a location.
+
+
+
+Currencies
+----------
+

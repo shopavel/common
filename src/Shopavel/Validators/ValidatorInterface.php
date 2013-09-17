@@ -3,7 +3,7 @@
 /**
  * Interface for validators.
  *
- * @author  Laurence Roberts <lsjroberts@gmail.com>
+ * @author  Laurence Roberts <lsjroberts@outlook.com>
  */
 interface ValidatorInterface {
 
