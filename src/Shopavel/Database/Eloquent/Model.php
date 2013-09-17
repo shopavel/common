@@ -12,8 +12,10 @@ class Model extends IlluminateModel {
      */
     public function __construct(array $attributes = array())
     {
+        $app = app();
+
         // Prefix the table with the shopavel prefix.
-        $this->setTable(app()->get('config')->get('shopavel::database.prefix') . $this->table);
+        $this->setTable($app['config']->get('shopavel::database.prefix') . $this->getTable());
 
         parent::__construct($attributes);
     }
