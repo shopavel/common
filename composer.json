@@ -2,11 +2,22 @@
     "name": "shopavel/core",
     "description": "Shopavel core components",
     "keywords": ["shopavel", "laravel", "ecommerce", "e-commerce"],
+    "authors": [
+        {
+            "name": "Laurence Roberts",
+            "email": "lsjroberts@outlook.com"
+        }
+    ],
     "license": "MIT",
     "require": {
         "baum/baum": "~1.0",
         "illuminate/database": "4.0.*",
         "illuminate/routing": "4.0.*",
         "illuminate/support": "4.0.*"
-    }
+    },
+    "autoload": {
+        "psr-0": {
+            "Shopavel": "src/"
+        }
+    },
 }
