@@ -57,3 +57,9 @@ Addresses allow you to define up to 4 additional lines along with a location.
 Currencies
 ----------
 
+
+
+License
+-------
+
+Shopavel is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT). Dependanices may have their own licensing.
