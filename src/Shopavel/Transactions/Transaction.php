@@ -16,6 +16,13 @@ class Transaction implements TransactionInterface {
         $this->db = $db;
     }
 
+    public function addValidator()
+    {
+        $validators = func_get_args();
+
+        $this->validators = array_merge($this->validators, $validators);
+    }
+
     public function validate($object)
     {
         if (count($this->validators) == 0) return;

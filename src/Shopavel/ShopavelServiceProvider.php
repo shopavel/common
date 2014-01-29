@@ -10,7 +10,7 @@ class ShopavelServiceProvider extends ServiceProvider {
      *
      * @var bool
      */
-    protected $defer = true;
+    protected $defer = false;
 
     /**
      * Bootstrap the application events.
@@ -19,7 +19,7 @@ class ShopavelServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        $this->package('shopavel/core');
+        $this->package('shopavel/core', 'shopavel', __DIR__.'/../../');
     }
 
     /**
@@ -29,7 +29,12 @@ class ShopavelServiceProvider extends ServiceProvider {
      */
     public function register()
     {
+        $app = $this->app;
 
+        $app['seeders'] = $app->share(function() use ($app)
+        {
+            return new Database\SeedResolver($app);
+        });
     }
 
     /**
@@ -39,7 +44,7 @@ class ShopavelServiceProvider extends ServiceProvider {
      */
     public function provides()
     {
-        return array();
+        return array('seeders');
     }
 
 }

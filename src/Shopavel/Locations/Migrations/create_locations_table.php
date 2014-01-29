@@ -26,7 +26,7 @@ class CreateLocationsTable extends Migration {
             $table->integer('lft')->nullable();
             $table->integer('rgt')->nullable();
             $table->integer('depth')->nullable();
-            
+
             $table->timestamps();
         });
     }
@@ -38,7 +38,7 @@ class CreateLocationsTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('warehouses');
+        Schema::drop('locations');
     }
 
 }

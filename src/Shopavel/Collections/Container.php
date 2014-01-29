@@ -1,4 +1,4 @@
-<?php namespace Shopavel\Containers;
+<?php namespace Shopavel\Collections;
 
 /**
  * A container is an entity which can dynamically contain multiple other
