@@ -1,4 +1,4 @@
-<?php namespace Shopavel\Validators;
+<?php namespace Shopavel\Transactions\Validators;
 
 /**
  * Interface for validators.

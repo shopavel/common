@@ -2,6 +2,9 @@
 
 class RequiredPropertiesValidator implements ValidatorInterface {
 
+    protected $required;
+    protected $exceptionMessage;
+
     public function __construct(array $required = array(), $exceptionMessage = null)
     {
         $this->required = $required;

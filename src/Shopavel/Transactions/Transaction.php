@@ -1,19 +1,14 @@
 <?php namespace Shopavel\Transactions;
 
-use Illuminate\Container\Container;
 use Shopavel\Validators\ValidatorInterface;
 
 class Transaction implements TransactionInterface {
 
-    protected $app;
-    protected $db;
     protected $validators;
 
-    public function __construct(array $validators = null, Container $app, Capsule $db)
+    public function __construct(array $validators = null)
     {
         $this->validators = $validators;
-        $this->app = $app;
-        $this->db = $db;
     }
 
     public function addValidator()
