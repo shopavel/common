@@ -1,16 +1,16 @@
 <?php namespace Shopavel\Collections;
 
 /**
- * A container is an entity which can dynamically contain multiple other
- * entities within a collection. The contained entities are made available as
+ * A collector is an entity which can dynamically contain multiple other
+ * entities within a collector. The collected entities are made available as
  * properties on the object using the magic __get() method.
  *
  * @author Laurence Roberts <lsjroberts@outlook.com>
  */
-trait Container {
+trait Collector {
 
     /**
-     * Add the collection to the container.
+     * Add the collection to the collector.
      *
      * @param Collection $collection
      */
@@ -30,8 +30,6 @@ trait Container {
         if ($this->collection->has($key)) {
             return $this->collection->get($key);
         }
-
-        return parent::__get($key);
     }
 
 }
