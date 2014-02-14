@@ -14,6 +14,11 @@ class Presenter {
     {
         $this->resource = $resource;
     }
+    
+    public function newInstance($resource = null)
+    {
+        return new static($resource);
+    }
 
     public function setResource($resource)
     {
