@@ -1,6 +1,6 @@
 {
-    "name": "shopavel/core",
-    "description": "Shopavel core components",
+    "name": "shopavel/common",
+    "description": "Shopavel common components",
     "keywords": ["shopavel", "laravel", "ecommerce", "e-commerce"],
     "authors": [
         {

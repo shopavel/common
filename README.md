@@ -1,19 +1,20 @@
-Shopavel Framework
-==================
+Shopavel Common
+===============
+
+**Common components for the Shopavel ecommerce package**
 
 
 
 Collections
 -----------
 
-A basic collection has the same behaviour as an array, with some helper methods, you can extend these to provide additional checks or functionality.
+A laravel collection has the same behaviour as an array, with some helper methods, you can extend these to provide additional checks or functionality.
 
 Collections use "dot" syntax for array access, for example: `$collection->put('foo.bar', 'baz')` is equivalent to `$collection['foo']['bar'] = 'baz'`.
 
 ### Immutable Collections
 
-An immutable collection once created can not be changed, the `put()`, `pop()` etc. methods will throw a
-`CollectionException`.
+An immutable collection once created can not be changed, the `put()`, `pop()` etc. methods will throw a `CollectionException`.
 
 ### Collectors
 
@@ -34,7 +35,7 @@ A presenter allows you to format a model's attributes when output to a view. For
 
 To use a presenter you should pass your model into the constructor, for example `$foo = new FooPresenter($foo)` where `$foo` is a eloquent model. When you then call `{{ $foo->created_at }}` in your view, the method `created_at()` will be called on the presenter instead, giving you a chance to format the data.
 
-You can convert multilpe models into presenters using:
+You can convert multiple models into presenters using:
 
 ```php
 $foos = $this->foo->all()->each(function($foo)
